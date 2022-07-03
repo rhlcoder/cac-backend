@@ -5,6 +5,6 @@ export async function createUser (input: DocumentDefinition<UserDocument>) {
   try {
     return await UserModel.create(input)
   } catch (e) {
-    throw new Error(e)
+    throw new Error('error creating user')
   }
 }
