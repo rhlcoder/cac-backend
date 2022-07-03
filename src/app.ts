@@ -1,6 +1,6 @@
 import express from 'express'
 import config from 'config'
-import connectDb from './utils/connect'
+import connectDb from './utils/connectDb'
 import logger from './utils/logger'
 import routes from './routes'
 
