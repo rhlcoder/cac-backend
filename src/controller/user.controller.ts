@@ -1,10 +1,11 @@
 import { Request, Response } from 'express'
 import logger from '../utils/logger'
+import { createUser } from '../service/user.service'
 
-export function createUserHandler (req: Request, res: Response) {
+export async function createUserHandler (req: Request, res: Response) {
   try {
     // call createUser function from user.service.ts
-    // TODO: implement createUser function
+    const user = await createUser(req.body)
   } catch (e) {
     if (e instanceof Error) {
       logger.error(e)
